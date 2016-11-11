@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @book.summary %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @book.avatar %>
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
+
+<div id="book_<%= @book.id%>_likes">
+	<%= render partial: "likes", locals: {book: @book} %>
+	</div>

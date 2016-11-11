@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+<div class="col-md-3"><h1 class="page-header">Listing Books</h1></div><br><br><div class="col-md-9"><%= link_to 'New Book', new_book_path, class: "btn btn-default" %></div>
+</div>
+<% @books.each do |book| %>
+	<h3><%= link_to book.title, book %></h3>
+	<div><%= simple_format book.avatar %></div>
+	<div><%= simple_format book.author %></div>
+	<div><%= simple_format book.summary %></div>
+	<p id="book_<%= book.id %>_likes"><%= render partial: "likes", locals: {book: book} %>
+	<p><%= link_to 'Bookmark', bookmark_book_path(book), method: :post %></p>
+	<hr />
+	<% end %>

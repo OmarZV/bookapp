@@ -1,0 +1,8 @@
+<% if user.likes.count >3 %>
+	A Ranking
+<% elsif %>
+	<% user.likes.count == 2%>
+	B Ranking
+<% else %>
+	C Ranking
+	<% end %>
