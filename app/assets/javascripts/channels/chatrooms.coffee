@@ -18,7 +18,7 @@ App.chatrooms = App.cable.subscriptions.create "ChatroomsChannel",
  				new Notification(data.username, {body: data.body})
 
  			else
- 				App.last_read.update(data.chatroom_id)
+ 				
 
  			active_chatroom.append("<div><strong>#{data.username}:</strong> #{data.body}</div>")
 

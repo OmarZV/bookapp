@@ -1,7 +1,7 @@
 handleVisibilityChange = ->
  	if !document.hidden
  		chatroom_id = $("[data-behavior='messages']").data("chatroom-id")
- 		
+
 
  		true
 

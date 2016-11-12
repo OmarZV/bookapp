@@ -5,7 +5,7 @@
 </div>
 <% @books.each do |book| %>
 	<h3><%= link_to book.title, book %></h3>
-	<div><%= simple_format book.avatar %></div>
+	<div><%= image_tag(book.avatar.url(:medium)) %></div>
 	<div><%= simple_format book.author %></div>
 	<div><%= simple_format book.summary %></div>
 	<p id="book_<%= book.id %>_likes"><%= render partial: "likes", locals: {book: book} %>

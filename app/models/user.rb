@@ -30,8 +30,8 @@ class User < ApplicationRecord
     end
   end
 
-	def likes?(book)
-		book.likes.where(user_id: id).any?
+	def likes?(post)
+		post.likes.where(user_id: id).any?
 	end	
 end
 

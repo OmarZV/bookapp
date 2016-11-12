@@ -1,4 +1,4 @@
-class Posts::LikesController < ApplicationController
+class Books::LikesController < ApplicationController
 	before_action :authenticate_user!
 	before_action :set_book
 	

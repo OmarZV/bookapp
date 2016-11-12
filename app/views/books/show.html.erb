@@ -16,8 +16,8 @@
 </p>
 
 <p>
-  <strong>Avatar:</strong>
-  <%= @book.avatar %>
+  <strong>Book Cover:</strong>
+  <%= image_tag(@book.avatar.url(:medium)) %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
